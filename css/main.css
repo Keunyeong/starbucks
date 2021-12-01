@@ -1,0 +1,128 @@
+/* COMMON */
+body {
+  /* 검정 보다 짙은 회색 */
+  color:#333;
+  /* 다른 브라우저에서도 동일하게 사용되도록 설정 */
+  font-size: 16px;
+  font-weight: 400;
+  /* 적절한 줄높이 설정 */
+  line-height: 1.4;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+/* img 태그는 inline 요소로 글자처럼 사용되기 때문에
+  아래에 공간이 생기는 baseline을 갖고 있다.
+  그 공간을 없애고 block 요소 처럼 사용하기 위한 설정. */
+img {
+  display:block;
+}
+a {
+  text-decoration: none;
+}
+
+
+/* HEADER */
+header {
+  background-color: #f6f5f0;
+  border-bottom: 1px solid #c8c8c8;
+}
+
+header .inner {
+  /* 넓이를 정하고 마진 좌우를 auto로 하여 가운데 정렬함 */
+  width: 1100px;
+  height: 120px;
+  margin: 0px auto;
+  position: relative;
+}
+
+header .logo {
+  /* logo의 크기를 정해주고 기준점을 찍고 포지션을 정해주면 된다. */
+  height: 75px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 0;
+}
+
+header .sub-menu {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+header .sub-menu ul.menu {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  position: relative;
+}
+
+header .sub-menu ul.menu li {
+  
+}
+
+header .sub-menu ul.menu li::before {
+  content:"";
+  width: 1px;
+  height: 12px;
+  background-color: #e5e5e5;
+  /* absolute 가 block 요소로 바꿔준다. */
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto ;
+}
+
+header .sub-menu ul.menu li:first-child::before {
+  display:none;
+}
+
+header .sub-menu ul.menu li a {
+  font-size: 12px;
+  padding: 11px 16px;
+  display: block;
+  color: #656565;
+}
+
+header .sub-menu ul.menu li a:hover {
+  color: #000;
+}
+
+header .sub-menu .search {
+  height: 34px;
+  position: relative;
+}
+
+header .sub-menu .search input {
+  width: 36px;
+  height: 34px;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  color: #777;
+} 
+
+header .sub-menu .search input:focus {
+  width: 190px;
+  border-color: #669900;
+  font-size: 12px;
+  transition: width .4s;
+}
+
+header .sub-menu .search .material-icons {
+  /* google material icon size = 24px */
+  height: 24px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5px;
+  margin: auto;
+  transition: .4s;
+}
+
+header .sub-menu .search.focused .material-icons {
+  opacity: 0;
+}
