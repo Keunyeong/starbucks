@@ -1,0 +1,42 @@
+/* COMMON */
+body {
+  /* 검정 보다 짙은 회색 */
+  color:#333;
+  /* 다른 브라우저에서도 동일하게 사용되도록 설정 */
+  font-size: 16px;
+  font-weight: 400;
+  /* 적절한 줄높이 설정 */
+  line-height: 1.4;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+/* img 태그는 inline 요소로 글자처럼 사용되기 때문에
+  아래에 공간이 생기는 baseline을 갖고 있다.
+  그 공간을 없애고 block 요소 처럼 사용하기 위한 설정. */
+img {
+  display:block;
+}
+
+
+/* HEADER */
+header {
+  background-color: royalblue;
+}
+
+header .inner {
+  /* 넓이를 정하고 마진 좌우를 auto로 하여 가운데 정렬함 */
+  width: 1100px;
+  height: 120px;
+  margin: 0px auto;
+  background-color: orange;
+  position:relative;
+}
+
+header .logo {
+  /* logo의 크기를 정해주고 기준점을 찍고 포지션을 정해주면 된다. */
+  height: 75px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto 0;
+}
